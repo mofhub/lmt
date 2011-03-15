@@ -1,0 +1,12 @@
+<h2>Maintenance Tracker</h2>
+
+<div class="stats_projects">Projects Pending: <b><%= @projects_count %></b></div>
+<div class="end_link"><%= link_to 'New Project', new_project_path %></div>
+
+<div class="results">
+<%= render 'project_results' %>
+</div>
+
+<br />
+
+<div class="end_link"><%= link_to 'New Project', new_project_path %></div>

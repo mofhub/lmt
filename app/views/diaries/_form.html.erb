@@ -1,0 +1,32 @@
+<div class="diary_edit">
+
+<%= form_for(@diary) do |f| %>
+  <% if @diary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diary.errors.count, "error") %> prohibited this diary from being saved:</h2>
+
+      <ul>
+      <% @diary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :landlord_id %><br />
+    <%= f.text_field :landlord_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

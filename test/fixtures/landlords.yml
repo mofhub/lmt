@@ -1,0 +1,46 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  company_name: MyString
+  contact_person: MyString
+  title: MyString
+  address: MyString
+  city: MyString
+  notes: MyText
+  email: MyString
+  telephone: MyString
+  mobile: MyString
+
+two:
+  company_name: MyString
+  contact_person: MyString
+  title: MyString
+  address: MyString
+  city: MyString
+  notes: MyText
+  email: MyString
+  telephone: MyString
+  mobile: MyString
+
+
+# == Schema Information
+#
+# Table name: landlords
+#
+#  id             :integer         not null, primary key
+#  company_name   :string(255)
+#  contact_person :string(255)
+#  title          :string(255)
+#  address        :string(255)
+#  notes          :text
+#  email          :string(255)
+#  telephone      :string(255)
+#  mobile         :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  postcode       :string(255)
+#  address2       :string(255)
+#  country        :string(255)
+#  city_id        :integer
+#
+

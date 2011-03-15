@@ -1,0 +1,47 @@
+<side>
+	<nav class="right-round">
+	<ul>
+		<li><%= link_to "Landlords", landlords_path %></li> |		
+
+		<li><%= link_to "Listings", listings_path %></li> |
+				
+		<li><%= link_to "Tenants", tenants_path %></li> |
+		
+		<li><%= link_to "Maintenance Tracker", projects_path %></li> |
+
+		<li><%= link_to "Document Tracker", documents_path %></li> |
+
+		<li><%= link_to "Diary", diaries_path %></li>
+		
+	</ul>	
+	</nav>
+
+	<nav class="left-round">
+		<ul>
+			<li><%= link_to "Home", home_path %></li> 
+			
+			<% if signed_in? && current_user.admin? %>
+			
+			<li><%= link_to 'Users', users_path %></li>
+			<% end %>
+			
+			<% if signed_in? %>
+			<li><%= link_to "My Profile", user_path(current_user) %></li>
+            <li><%= link_to "Settings", edit_user_path(current_user)%></li>
+			<% end %>
+			
+			<!-- <li><%= link_to "About LMS", about_path %></li> -->
+			
+			<!-- <li><%= link_to "Help", help_path %></li> -->
+
+			<!-- <li><%= link_to "Contact Us", contact_path %></li> -->
+			
+			<% if signed_in? %>
+			<li><%= link_to "Sign out", signout_path %></li>
+			<% else%>
+			<li><%= link_to "Sign in", signin_path %></li>
+			<% end %>
+			
+		</ul>
+	</nav>
+</side>

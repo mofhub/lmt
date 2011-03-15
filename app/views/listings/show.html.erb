@@ -1,0 +1,64 @@
+<div class="stats_listings">Listings in the system: <b><%= @listing_count %></b></div>
+<div class="listing_body">
+<table>
+	<tr>
+	<td>
+<p>			
+	<b>
+		<% if @listing.show_weekly %>
+	
+		<%= number_to_currency(@listing.price/4, :unit => "&pound;") %> / week </b><br />
+		<% else %>
+		
+ 	 <b><%= number_to_currency(@listing.price, :unit => "&pound;") %> / month </b><br />
+	    <% end %>
+	
+	 <b><%= @listing.address %></b><br />
+	 <b><%= @listing.bedrooms %> Bed</b>
+
+  /  <b><%= @listing.bathrooms %> Bath</b>
+</p>
+<p>	
+  	<b>City:</b>
+	<%= @listing.city.name %>
+<br />
+  	<b>Postcode:</b>
+  	<%= @listing.postcode.upcase %>
+</p>
+</p>
+	</td>
+	<td>
+<p>	
+	<%= image_tag @listing.photo.url(:medium)%>
+	<small><%= link_to 'Edit', edit_listing_path(@listing) %></small>
+</p>
+	</td>
+</tr>
+<tr>
+	<td>
+<p>
+  <b>Title:</b>
+  <%= @listing.content %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @listing.body %>
+</p>
+<p>
+  <b>Property Type:</b>	
+  <%= @listing.property_type %> <br />
+
+  <b>Ad Type:</b>	
+  <%= @listing.ad_type %>
+</p>
+<p>
+	<b>Landlord:</b>
+  <%= link_to(@listing.landlord.company_name, @listing.landlord) %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>
+</td>
+</tr>
+</table>
+</div>

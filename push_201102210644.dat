@@ -1,0 +1,1 @@
+{"database_url":"sqlite://db/development.sqlite3","stream_state":{},"completed_tables":[],"remote_url":"http://heroku:osui59a24am79x@taps3.heroku.com","table_filter":null,"klass":"Taps::Push","session_uri":"/sessions/435410168","local_tables_info":{"projects":1,"schema_migrations":18,"diaries":1,"users":8,"tenants":2,"landlords":3,"listings":4}}

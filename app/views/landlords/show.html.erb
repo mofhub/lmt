@@ -1,0 +1,73 @@
+<div class="stats">Landlords in the system: <b><%= @landlord_count %></b></div>
+
+<div class="landlord_body">
+
+
+<p>
+ <h3><%= @landlord.company_name %></h3>
+</p>
+<p>
+  <b>Contact Person:</b> <%= @landlord.contact_person %> ( <%= @landlord.title %> )
+<br />
+  <b>Address:</b> <%= @landlord.address %>
+<br />
+  <b>Address cont:</b> <%= @landlord.address2 %>
+</p>
+<p>	
+  	<b>City:</b>
+	<%= @landlord.city.name %>
+<br />
+
+<br />	
+  <b>Postcode:</b> <%= @landlord.postcode.upcase %>
+<br />
+  <b>Country:</b> <%= @landlord.country %>
+</p>
+
+<p>
+  <%= mail_to(@landlord.email) %>
+<br />
+  <b>Tel:</b>
+  <%= number_to_phone(@landlord.telephone.to_i, :area_code => true) %>
+<br />
+  <b>Mobile:</b>
+  <%= number_to_phone(@landlord.mobile.to_i, :area_code =>true) %>
+</p>
+
+<div class="landlord_title">
+	  <b>Notes:</b>
+	  <%= @landlord.notes %>
+</div>	
+
+<p>
+<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
+<%= link_to 'Back', landlords_path %>
+</p>
+
+<table class="profile" summary="Profile information">
+  <tr>
+  	<td class="main">
+
+  		<% if @landlord.listings.any? %>
+  		<table class="microposts" summary="User microposts">
+  			<%= render @listings_partial %>
+  			</table>
+  			<% end %>
+  		</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

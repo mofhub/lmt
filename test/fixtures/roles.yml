@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  landlord_id: 1
+  listing_id: 1
+  status_id: 1
+  title: MyString
+
+two:
+  landlord_id: 1
+  listing_id: 1
+  status_id: 1
+  title: MyString
+
+# == Schema Information
+#
+# Table name: roles
+#
+#  id          :integer         not null, primary key
+#  landlord_id :integer         not null
+#  project_id  :integer         not null
+#  status_id   :integer         default(1), not null
+#  title       :string(255)     not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

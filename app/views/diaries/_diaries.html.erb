@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Landlord</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diaries.each do |diary| %>
+  <tr>
+    <td><%= diary.title %></td>
+    <td><%= truncate diary.body, :length => 40 %></td> <!-- truncate amount of text output -->
+    <td><%= link_to(diary.landlord.company_name, diary.landlord.company_name) %></td>
+    <td><%= link_to 'Show', diary %></td>
+    <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
+    <td><%= link_to 'Destroy', diary, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,66 @@
+<div class="landlord_edit">
+<%= form_for @landlord do |f| %>
+  <% if @landlord.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@landlord.errors.count, "error") %> prohibited this landlord from being saved:</h2>
+
+      <ul>
+      <% @landlord.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_person %><br />
+    <%= f.text_field :contact_person %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+	<%= f.label :address_cont %><br />
+	<%= f.text_field :address2 %>
+  </div>	
+  <div class="field">
+	<%= f.label :postcode %><br />
+	<%= f.text_field :postcode %>	
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,44 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table>
+  <tr>
+	<th></th>
+	<th><%= sortable "price" %></th>  
+    <th><%= sortable "address" %></th>
+	<th>City</th>  
+    <th>Description</th>
+	<th><%= sortable "property_type" %></td>
+	<th><%= sortable "ad_type" %></th>	
+    <th>Landlord/Company</th>
+	<th><%= sortable "created_at" %></th>
+    <th></th>
+	<th></th>
+	<th></th>
+  </tr>
+  <tr>
+	
+	<%= will_paginate %>
+	
+	<% @listings.each do |listing| %>
+	  <tr>
+		<td><%= link_to(image_tag(listing.photo.url(:thumb)), listing) %></td>
+	    <td><%= link_to listing.price, listing %></td>
+	    <td><%= listing.address %></td>
+	
+	    <td><%= listing.city_id %></td>
+	
+		<td><%= truncate listing.content, :length => 40 %></td><!-- truncate amount of text output -->
+		<td><%= listing.property_type %></td>
+		<td><%= listing.ad_type %></td>
+		<td><%= listing.landlord.company_name %>
+		<td><%= listing.created_at.strftime("%B %e, %Y") %></td>	
+      
+	    <td><%= link_to_icon 'Show', listing %></td>
+	    <td><%= link_to_icon 'Edit', edit_listing_path(listing) %></td>
+	    <td><%= link_to_icon 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>	 
+	 </tr>
+	</table>
+<%= will_paginate %>

@@ -1,0 +1,67 @@
+<div class="listing_edit">
+<%= form_for @listing, :html => { :multipart => true } do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :price %>:<br />
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+	<%= f.label :address %>:<br />
+	<%= f.text_field :address %>
+  </div>
+  <div class="field">
+	<%= f.label :bedrooms %>:<br />
+	<%= select_tag(:bedrooms, options_for_select([['1 Bedroom', '2 Bedrooms']])) %>
+  </div>
+  <div class="field">
+	<%= f.label :bathrooms %>:<br />    
+	<%= select_tag(:bathrooms, options_for_select([['1 Bathroom', '2 Bathrooms']])) %>
+  </div>
+  <div class="field">
+    <%= f.label :city_id %>:<br />
+    <%= f.text_field :city_id %>
+  </div>
+  <div class="field">
+    <%= f.label :postcode %>:<br />
+    <%= f.text_field :postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>:<br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :body %>:<br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :landlord_id %>:<br />
+    <%= f.text_field :landlord_id %>
+  </div> 
+  <div class="field">
+	<%= f.label :property_type %>:<br />
+	<%= f.text_field :property_type %>
+  </div>
+  <div class="field">
+	<%= f.label :ad_type %>:<br />
+	<%= f.text_field :ad_type %>
+  </div>
+  <div class="field">
+	<%= f.file_field :photo %><br />
+  </div>	
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

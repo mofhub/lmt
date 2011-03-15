@@ -1,0 +1,30 @@
+<table>
+  <tr>
+	<th></th>
+    <th><%= sortable "title" %></th>
+    <th>Notes</th>
+    <th><%= sortable "created_at" %></th>
+    <th>Property Address</th>
+    <th></th>
+  </tr>
+
+<%= will_paginate %>
+
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= link_to(image_tag("179-notepad.png"), document) %></td>
+	<td><%= link_to(document.title, document) %></td>
+	
+    <td><%= truncate document.notes, :length => 50 %></td>    <!-- truncate amount of text output -->
+	<td><%= document.created_at.day %> Days ago</td>
+	<td><%= document.listing.address %></td>	
+
+    <td><%= link_to_icon 'Show', document %></td>
+    <td><%= link_to_icon 'Edit', edit_document_path(document) %></td>
+    <td><%= link_to_icon 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+
+</table>
+<%= will_paginate %>

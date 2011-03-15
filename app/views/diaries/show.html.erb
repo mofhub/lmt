@@ -1,0 +1,22 @@
+<div class="diary_body">
+
+<p>
+  <b>Title:</b>
+  <%= @diary.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @diary.body %>
+</p>
+
+<p>
+  <b>Landlord:</b>
+  <%= @diary.landlord.company_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_diary_path(@diary) %> |
+<%= link_to 'Back', diaries_path %>
+
+</div>

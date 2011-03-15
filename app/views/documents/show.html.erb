@@ -1,0 +1,26 @@
+<h2>Documents</h2>
+
+<div class="document_body">
+
+<p>
+  <b>Title:</b>
+  <%= @document.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @document.notes %>  
+</p>
+
+<p>
+	<b>Property:</b>
+	<%= link_to((@document.listing.address), @document.listing) %>
+
+    
+</p>	
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
+
+
+</div>

@@ -1,0 +1,11 @@
+<%= simple_form_for(@city) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+	<%= f.label :name %><br/>
+	<%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

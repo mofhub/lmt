@@ -1,0 +1,28 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table>
+  <tr>
+    <th><%= sortable "company_name" %></th>
+    <th>Contact</th>
+    <th><%= sortable "title" %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+  </tr>
+
+<%= will_paginate %>
+
+<% @landlords.each do |landlord| %>
+  <tr>
+    <td><%= link_to((landlord.company_name), landlord) %></td>
+    <td><%= landlord.contact_person %></td>
+    <td><%= landlord.title %></td>
+	<td><%= mail_to(landlord.email) %></td>
+    <td><%= link_to_icon 'Show', landlord %></td>
+    <td><%= link_to_icon 'Edit', edit_landlord_path(landlord) %></td>
+    <td><%= link_to_icon 'Destroy', landlord, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate %>

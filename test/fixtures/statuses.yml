@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  position: 1
+
+two:
+  title: MyString
+  position: 1
+
+# == Schema Information
+#
+# Table name: statuses
+#
+#  id         :integer         not null, primary key
+#  title      :string(255)     not null
+#  position   :integer         not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+

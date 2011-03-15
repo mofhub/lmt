@@ -1,0 +1,50 @@
+<div class="stats_tenants">Tenants in the system: <b><%= @tenant_count %></b></div>
+
+<h2>Tenants</h2>
+
+<div class="tenant_body">
+<p>
+	<h3> <%= @tenant.first_name %>  <%= @tenant.last_name %></h3>	
+</p>
+
+<p>
+<b>Current Rental Listing:</b>	<%= link_to(@tenant.listing.address, @tenant.listing ) %>
+</p>	
+
+
+<p>
+	<b>Phone:</b>
+	<%= number_to_phone(@tenant.telephone.to_i, :area_code => true) %><br />
+
+	<b>Mobile:</b>
+	<%= number_to_phone(@tenant.mobile_phone.to_i, :area_code => true) %>
+</p>
+<p>
+  <%= mail_to(@tenant.email) %>
+</p>
+
+<p>
+<b>Job Title (Industry):</b> <%= @tenant.job_title %>	
+</p>	
+<p>
+<b>Gender:</b>  <%= @tenant.gender %>
+</p>
+<p>
+<b>DOB:</b> <%= @tenant.date_of_birth %>	
+</p>
+<p>
+<b>Address:</b> <%= @tenant.address %>
+</p>
+<p>	
+  	<b>City:</b>
+	<%= @tenant.city.name %>
+
+</p>
+<p>
+<b>Post Code:</b> <%= @tenant.postcode %>	
+</p>
+
+<%= link_to 'Edit', edit_tenant_path(@tenant) %> |
+<%= link_to 'Back', tenants_path %>
+
+</div>

@@ -1,0 +1,31 @@
+<table>
+  <tr>
+	<th></th>
+    <th><%= sortable "title" %></th>
+    <th>Description</th>
+    <th>Date Created</th>
+    <th>Property</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= will_paginate %>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= link_to(image_tag("188-paint-roller.png"), project) %></td>
+	<td><%= link_to(project.title, project) %></td>	
+    <td><%= truncate project.body, :length => 40 %></td>    <!-- truncate amount of text output -->
+	<td><%= project.created_at.day %> Days ago</td>
+    <td><%= project.listing.address %></td>
+
+    <td><%= link_to_icon 'Show', project %></td>
+    <td><%= link_to_icon 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to_icon 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+<%= render @projects %>
+
+</table>
+<%= will_paginate %>

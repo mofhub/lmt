@@ -1,0 +1,38 @@
+<h2>LMS Administration</h2>
+<div class="stats_users">Users in the system: <b><%= @users_count %></b></div>
+<div class="end_link"><%= link_to 'New User', new_user_path %></div>
+
+<div class="results">
+<table>
+  <tr>
+	<th></th>
+    <th><%= sortable "name" %></th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= will_paginate %>
+
+<% @users.each do |user| %>
+  <tr>
+    <td> <%= link_to (gravatar_for (user, options = { :size => 30 })), user %>
+	<!-- <%= image_tag("user.png") %> --></td>
+	<td> <%= link_to (user.name), user %></td>
+    <td><%= mail_to(user.email) %></td>
+    <td><%= link_to_icon 'Show', user %></td>
+    <td><%= link_to_icon 'Edit', edit_user_path(user) %></td>
+<% if current_user.admin? %>    
+<td><%= link_to_icon 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
+  </tr>
+<% end %>
+
+</table>
+<%= will_paginate %>
+
+</div>
+<br />
+
+<div class="end_link"><%= link_to 'New User', new_user_path %></div>

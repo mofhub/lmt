@@ -1,0 +1,12 @@
+<h2>Documents</h2>
+
+<div class="stats_documents">Documents: <b><%= number_with_delimiter(@document_count) %></b></div>
+<div class="end_link"><%= link_to 'New Document', new_document_path %></div>
+
+<div class="results">
+<%= render 'documents' %>
+</div>
+
+<br />
+
+<div class="end_link"><%= link_to 'New Document', new_document_path %></div>

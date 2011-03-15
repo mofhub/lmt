@@ -1,0 +1,8 @@
+<h2><%= image_tag("user.png") %> Edit User</h2>
+
+<%= render 'form' %>
+
+<div class="end_link">
+<%= link_to 'My Profile', @user %> |
+<%= link_to 'User List', users_path %>
+</div>

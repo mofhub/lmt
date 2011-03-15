@@ -1,0 +1,23 @@
+<h2>Landlord Listings</h2> 
+
+<div class="search">
+<%= form_tag landlords_path, :method => 'get' do %>
+	<%= hidden_field_tag :direction, params[:direction] %>
+	<%= hidden_field_tag :sort, params[:sort] %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Contact Name Search", :name => nil %>
+	<span class="add_new">	<%= link_to 'Add New Landlord', new_landlord_path %></span>
+	</p>
+<% end %>		
+</div>
+
+<div class="stats">Landlords in the system: <b><%= number_with_delimiter(@landlord_count) %></b></div>
+
+<div class="results">
+	<%= render 'landlords' %>
+</div>
+
+<br />
+
+<div class="end_link"><%= link_to 'Add New Landlord', new_landlord_path %></div>

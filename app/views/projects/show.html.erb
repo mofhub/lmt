@@ -1,0 +1,29 @@
+<div class="stats_projects">Projects Pending: <b><%= @projects_count %></b></div>
+
+<h2>Maintenance Tracker</h2>
+
+<div class="maintenance_body">
+
+<p>
+	<b>Property:</b>
+	<%= link_to(@project.listing.address, @project.listing) %>
+
+<p>
+  <b>To Do:</b>
+  <%= @project.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @project.body %>  
+</p>
+
+<p>
+  <b>Status:</b>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+
+
+</div>

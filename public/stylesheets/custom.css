@@ -1,0 +1,590 @@
+.container {
+	width: 98%;
+	border:1px solid black;
+}
+
+body {
+	background: #898;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+	padding-top: 20px;
+	background-color: black;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	height: 50px;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+footer {
+	
+	margin-bottom: 10px;
+}
+
+.logo {	
+	margin: 0px auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	padding: 0px 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 980px;
+} 
+
+section {
+	width: 95%;
+	margin-top: 4%;
+	padding: 10px;
+	background: #fff;
+	
+}
+
+h1 {
+	color: #232323;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -2px;
+	line-height: 1.1em;
+	margin: 40px 0px 5px;
+	margin-top: 40px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	text-align: center;	
+}
+
+/*ul   {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	padding-left: 6px;
+}
+*/
+h2  {
+	color: #232323;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -2px;
+	line-height: 1.1em;
+	margin-top: 70px;
+	margin-left: 200px;
+	width: 30%;
+	text-align: center;
+	border:1px solid black;
+	padding: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/*Links*/
+
+.image_thumb {
+	border: 1px;
+}
+
+a: {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;	
+	background-color: transparent;
+}
+
+a:visited {
+	color: #666;	
+}
+
+a.icon {
+  opacity: 0.8;
+  border-bottom: none;
+}
+
+a.icon:hover {
+  opacity: 1.0;
+  background-color: transparent;
+}
+
+a.icon img {
+  border: none;
+}
+
+/*.odd {
+  background-color: #373737;
+}
+*/
+li .handle {
+  font-size: 10px;
+  cursor: move;
+  color: #777;
+}
+
+/*navigation*/
+
+.right-round {
+    float: right;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+.left-round {
+    float: left;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+nav {
+	float: right;
+	background: #fff;
+	padding: 0 0.7em;
+	white-space: nowrap;
+}
+
+navside {
+	float: right;
+	background: white;
+	padding: 0 0.7em;
+	white-space: nowrap;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.2em 0;
+}
+
+nav ul li a {
+	padding: 0 5px;
+	font-weight: bold;
+}
+
+nav ul li a:visited {
+	color: #09c;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Sign up button */
+
+a.signup_button {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: 150px;
+	color: #fff;
+	background: #006400;
+	font-size: 150%;
+	font-weight: bold;
+	padding: 20px;
+}
+
+/* Landlords */
+
+.landlord_title {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top:100px;
+    margin-bottom:50px;
+	background: #ff9;
+	border:1px solid black;
+	font-size: 80%;
+	width:70%;
+	padding:5px;
+}
+
+.landlord_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:50px;
+	margin-right: 200px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.landlord_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.landlord_info {
+	background: #ff9;
+	font-size: 75%;
+	margin-left:10px;
+	margin-top:10px;
+	border:1px solid black;
+	padding:5px;
+	width:50%;
+	height:50px;	
+}
+
+/* Listings */
+
+.listing_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:40px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.listing_info {
+	background: #ff9;
+	font-size: 75%;
+	width:200px;
+	border:1px solid black;
+	padding:5px;
+	margin-top:35px;
+}
+
+.listing_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+/* Maintenance Tracker */
+
+.maintenance_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.maintenance_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:50px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+
+/* Document Tracker */
+
+.document_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.document_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:50px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+/* Tenants */
+
+.tenant_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:50px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.tenant_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom:10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+/* Diary */
+.diary_body {
+	background: #ffc;
+    font-size: 120%;
+    margin-top:50px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+.diary_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:70%;
+}
+
+/* Users */
+
+.sign_in {
+    background: #ffc;
+    font-size: 120%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25em;
+    border:1px solid black;
+    padding:5px;
+}
+
+.user_edit {
+    background: #ffc;
+    font-size: 120%;
+    margin-top:20px;
+	margin-bottom:10px;
+	margin-right: 100px;
+	margin-left: 200px;
+    border:1px solid black;
+    padding:5px;
+    width:500px;
+}
+
+/* Lists */
+
+.results {
+	padding:0px;
+    margin-top:20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border:1px solid black;
+}
+
+/* Stats */
+
+.stats {
+ 	 display:block; position:fixed; top:0px; right:25px; background:green; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;	
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+
+.stats_listings {
+ 	 display:block; position:fixed; top:0px; right:25px; background:yellow; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+.stats_documents {
+ 	 display:block; position:fixed; top:0px; right:25px; background:gray; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+
+.stats_tenants {
+ 	 display:block; position:fixed; top:0px; right:25px; background:orange; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;	
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+
+.stats_projects {
+ 	 display:block; position:fixed; top:0px; right:25px; background:white; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;	
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+
+.stats_users {
+ 	 display:block; position:fixed; top:0px; right:25px; background:yellow; padding:7px 5px;
+	 border:1px solid #000;
+	 border-left-color:#000;
+	 border-top-color:#000;
+	 width: 175px;
+	 margin-top: 5px;	
+	 -moz-border-radius: 5px;
+	 -webkit-border-radius: 5px;
+	 border-radius: 5px;
+}
+
+/* Search Field */
+
+.search {
+	margin-left: 20px;
+}
+
+/* Round corners */
+.round {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* footer */
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width: 710px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer nav {
+	float: none;
+	width: 70%;
+}
+
+/* end links */
+
+.end_link {
+	margin-left: 30px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 120%;
+	background: #fff;
+	width: 15%;
+	text-align: center;
+}
+
+.add_new {
+	margin-left: 68%;
+}
+
+/*.form {
+	background: url(http://www.assemblesoft.com/examples/form/gfx/user.gif) no-repeat 95% 1em;	
+}
+
+/* User show page */
+
+table.profile {
+	width: 100%;
+	padding: 1em;
+}
+
+table.microposts tr td.micropost span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+	margin-left: 200px;
+}
+
+table.tenants tr td.tenants {
+	display: block;
+	font-size: 85%;
+	color: #666;
+	margin-left: 200px;
+}
+
+td.main {
+	width: 70%;
+	padding: 1em;
+}
+
+.sidebar {
+	background: #ffc;
+    position:fixed; top:0px; right:375px; padding:7px 5px;
+    border:1px solid #000;
+    margin-top: 200px;
+	margin-left: 200px;
+	margin-right: -25em;
+    width: 200px;
+}
+
+.profile img.gravatar {
+	border: 1px solid #999;
+	margin-bottom: -15px;
+}
+
+div.field, div.actions {
+	margin-bottom :10px;
+}
